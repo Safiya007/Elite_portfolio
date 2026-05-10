@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Safiya Begam · Aspiring Full Stack Developer & AI Enthusias</title>
+<meta name="description" content="Portfolio of Safiya Begam — Aspiring Full Stack Developer & AI Engineer. Building next-generation digital experiences with React, Java, Spring Boot, and AI integration."/>
+
+<!-- FAVICON — inline SVG, no external file needed -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23c9a84c'/%3E%3Cstop offset='100%25' stop-color='%23e8c97a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230a0a0b'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-style='italic' font-size='28' fill='url(%23g)'%3ESB%3C/text%3E%3C/svg%3E"/>
+
+<!-- Fonts: Playfair Display (display/headings) + DM Sans (body) + JetBrains Mono (code/labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,600;1,700;1,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&display=swap"/>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">SAFIYA 
+    BUILDS/</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor">
+  <div class="cur-dot"></div>
+  <div class="cur-ring"></div>
+</div>
+
+<!-- PARTICLES -->
+<canvas id="particles"></canvas>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about"      onclick="closeMobileNav()">About</a>
+  <a href="#skills"     onclick="closeMobileNav()">Skills</a>
+  <a href="#projects"   onclick="closeMobileNav()">Projects</a>
+  <a href="#education"  onclick="closeMobileNav()">Education</a>
+  <a href="#experience" onclick="closeMobileNav()">Experience</a>
+  <a href="#contact"    onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo"><span>SAFIYA</span>&nbsp;BUILDS</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container" style="position:relative;z-index:2;width:100%">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Aspiring Full Stack Developer
+        </div>
+        <h1 class="hero-h1">
+          Crafting digital<br>
+          <span class="typed-wrap">
+            <span id="typed-text"></span><span class="cursor-blink"></span>
+          </span>
+        </h1>
+        <p class="hero-p">
+          Aspiring Full Stack Developer &amp;  Generative AI Engineer passionate about building premium web Applications ,Currently exploing backend development, with a strong passion for building user-focused applications, continuously learning new technologies, and contributing effectively to organizational growth through problem-solving, collaboration, and innovation.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+            Hire Me
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item reveal delay-1">
+            <span class="stat-num">4+</span>
+            <span class="stat-lbl">Projects</span>
+          </div>
+          <div class="stat-item reveal delay-2">
+            <span class="stat-num">3</span>
+            <span class="stat-lbl">Internships</span>
+          </div>
+          <div class="stat-item reveal delay-3">
+            <span class="stat-num">15+</span>
+            <span class="stat-lbl">Certifications</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D ORB -->
+      <div class="hero-right">
+        <div class="orb-scene">
+          <div class="orbit-ring orbit-ring-1"><div class="orbit-dot"></div></div>
+          <div class="orbit-ring orbit-ring-2"><div class="orbit-dot"></div></div>
+          <div class="orbit-ring orbit-ring-3"><div class="orbit-dot"></div></div>
+          <div class="orb-main"><div class="orb-sphere"></div></div>
+          <div class="skill-pill pill-react">⚛️ React</div>
+          <div class="skill-pill pill-java">☕ Java</div>
+          <div class="skill-pill pill-ai">🤖 DSA</div>
+          <div class="skill-pill pill-aws">🌱 SpringBoot</div>
+          <div class="skill-pill pill-ux">✦ Web Design</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-item">React</span><span class="marquee-item">Java</span>
+    <span class="marquee-item">JavaScript</span><span class="marquee-item">SpringBoot</span>
+    <span class="marquee-item">AWS AI Practitioner</span><span class="marquee-item">Prompt Engineering</span>
+    <span class="marquee-item">Java</span><span class="marquee-item">Nodejs</span>
+    <span class="marquee-item">UI / UX Design</span><span class="marquee-item">Full Stack Dev</span>
+    <span class="marquee-item">DSA</span><span class="marquee-item">Generative AI</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item">React</span><span class="marquee-item">Java</span>
+    <span class="marquee-item">JavaScript</span><span class="marquee-item">SpringBoot</span>
+    <span class="marquee-item">AWS AI Practitioner</span><span class="marquee-item">Prompt Engineering</span>
+    <span class="marquee-item">Java</span><span class="marquee-item">Nodejs</span>
+    <span class="marquee-item">UI / UX Design</span><span class="marquee-item">Full Stack Dev</span>
+    <span class="marquee-item">DSA</span><span class="marquee-item">Generative AI</span>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="section-label reveal">About Me</div>
+        <h2 class="section-title reveal delay-1">
+          Building the future,<br>
+          <span class="grad-text">one line at a time</span>
+        </h2>
+        <div class="about-bio reveal delay-2">
+          <p>I'm <strong>SAFIYA BEGAM</strong>, a Full Stack Developer and AI crafter passionate about building products that sit at the intersection of <strong>beautiful design and powerful technology</strong>.</p>
+          <p>From crafting pixel-perfect interfaces to exploring scalable backend systems, I bring a holistic approach to software development. Currently exploring the frontier of <strong>AI-powered applications and immersive digital experiences</strong>.</p>
+          <p>When I'm not coding, I'm reading design systems, contributing to open source, or thinking about how emerging tech can solve real human problems.</p>
+        </div>
+
+        <div class="pull-quote reveal delay-3">“Learn.Code. Create. Repeat —learning relentlessly, building passionately, and growing consistently.”</div>
+
+        <div class="timeline reveal delay-4" style="margin-top:2rem">
+          <div class="tl-item">
+            <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2023</div>
+              <div class="tl-title">Started Programming Journey</div>
+              <div class="tl-desc">Developed logical thinking, problem-solving abilities, and basic programming skills through simple coding exercises.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2023 – 2024</div>
+              <div class="tl-title">Learned C &amp; Java Fundamentals</div>
+              <div class="tl-desc">Built strong foundations in programming concepts including variables, loops, arrays, functions, and problem-solving using C and Java.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2024</div>
+              <div class="tl-title">Explored OOPs &amp; Data Structures</div>
+              <div class="tl-desc">Strengthened software development skills through OOP, data structures, algorithms, and coding practice for real-world problem solving.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2024 – 2025</div>
+              <div class="tl-title">Frontend Development Journey</div>
+              <div class="tl-desc">Learned HTML, CSS, JavaScript, responsive UI design, and modern frontend development to create interactive, visually appealing web applications.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2025</div>
+              <div class="tl-title">Exploring Various Fields &amp; Projects</div>
+              <div class="tl-desc">Building dynamic applications using React.js, component-based architecture, APIs, state management, and advanced JavaScript concepts.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"><div class="tl-dot-inner"></div></div>
+            <div class="tl-content">
+              <div class="tl-year">2025 – Present</div>
+              <div class="tl-title">Expanding Into Full Stack Development</div>
+              <div class="tl-desc">Extending expertise into backend development, databases,  MySQL, Node.js, and complete full stack application development with scalable architecture.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label reveal delay-1">Skills &amp; Proficiency</div>
+        <div class="skills-bars reveal delay-2" id="skillBars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">React / JavaScript</span><span class="skill-bar-pct">68%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="68"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">Java</span><span class="skill-bar-pct">80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">HTML / CSS</span><span class="skill-bar-pct">92%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">UI/UX Design</span><span class="skill-bar-pct">78%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">Git / GitHub</span><span class="skill-bar-pct">80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-top"><span class="skill-bar-name">Prompt Engineering</span><span class="skill-bar-pct">85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     SKILLS
+══════════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:1rem">
+      <div class="section-label reveal" style="justify-content:center">Tech Stack</div>
+      <h2 class="section-title reveal delay-1">Skills &amp; <span class="grad-text">Technologies</span></h2>
+      <p class="reveal delay-2" style="color:var(--text2);font-size:.95rem;max-width:520px;margin:0 auto;line-height:1.75;font-weight:300">
+        A curated set of tools and technologies I use to build world-class digital products
+      </p>
+    </div>
+    <div class="skills-cats">
+      <div class="skill-cat-card reveal delay-2">
+        <div class="cat-icon frontend">🎨</div>
+        <div class="cat-title">Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag fe">React</span><span class="skill-tag fe">JavaScript</span>
+          <span class="skill-tag fe">HTML5</span><span class="skill-tag fe">CSS3</span>
+          <span class="skill-tag fe">TypeScript</span><span class="skill-tag fe">Responsive</span>
+          <span class="skill-tag fe">Animation</span>
+        </div>
+      </div>
+      <div class="skill-cat-card reveal delay-3">
+        <div class="cat-icon backend">⚙️</div>
+        <div class="cat-title">Backend &amp; AI</div>
+        <div class="skill-tags">
+          <span class="skill-tag be">Java</span><span class="skill-tag be">Python</span>
+          <span class="skill-tag be">REST APIs</span><span class="skill-tag be">SpringBoot</span>
+          <span class="skill-tag be">SQL</span><span class="skill-tag be">Mysql</span>
+        </div>
+      </div>
+      <div class="skill-cat-card reveal delay-4">
+        <div class="cat-icon tools">🛠️</div>
+        <div class="cat-title">Tools &amp; Design</div>
+        <div class="skill-tags">
+          <span class="skill-tag tl">Git</span><span class="skill-tag tl">GitHub</span>
+          <span class="skill-tag tl">UI/UX</span><span class="skill-tag tl">VS Code</span>
+          <span class="skill-tag tl">Vercel</span><span class="skill-tag tl">Figma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:1rem">
+      <div class="section-label reveal" style="justify-content:center">Featured Work</div>
+      <h2 class="section-title reveal delay-1">Selected <span class="grad-text">Projects</span></h2>
+      <p class="reveal delay-2" style="color:var(--text2);font-size:.95rem;max-width:520px;margin:0 auto;line-height:1.75;font-weight:300">
+        A showcase of projects that demonstrate my passion for building impactful digital experiences
+      </p>
+    </div>
+    <div class="projects-grid">
+
+<!-- Portfolio Project -->
+<div class="project-card reveal delay-4">
+  <div class="proj-img">
+    <div class="proj-img-bg" style="background:linear-gradient(135deg,#111114,#1f1a0a)">
+      💼
+    </div>
+
+    <div class="proj-img-overlay"></div>
+
+    <div class="proj-live-badge featured">
+      Personal Brand ✦
+    </div>
+  </div>
+
+  <div class="proj-body">
+    <div class="proj-title">
+      Developer Portfolio
+    </div>
+
+    <div class="proj-desc">
+      A premium modern developer portfolio designed with advanced UI animations,
+      glassmorphism effects, interactive components, responsive layouts,
+      and immersive user experience.
+    </div>
+
+    <div class="proj-tech">
+      <span class="tech-chip">HTML5</span>
+      <span class="tech-chip">CSS3</span>
+      <span class="tech-chip">JavaScript</span>
+      <span class="tech-chip">Responsive UI</span>
+      <span class="tech-chip">Animations</span>
+      <span class="tech-chip">Glassmorphism</span>
+    </div>
+
+    <div class="proj-actions">
+
+      <a
+        href="https://github.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="proj-btn github"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="#hero"
+        class="proj-btn demo"
+      >
+        Live Demo
+      </a>
+
+    </div>
+  </div>
+</div>
+
+
+      <!-- Project 1 -->
+      <div class="project-card reveal delay-1">
+        <div class="proj-img">
+          <div class="proj-img-bg" style="background:linear-gradient(135deg,#1a0e00,#0f1a0a)">🍋</div>
+          <div class="proj-img-overlay"></div>
+          <div class="proj-live-badge live">Live ✦</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Little Lemon Restaurant</div>
+          <div class="proj-desc">A beautifully crafted restaurant website featuring online reservations, dynamic menus, and a seamless UX that drives table bookings. Built with accessibility and mobile-first design in mind.</div>
+          <div class="proj-tech">
+            <span class="tech-chip">React</span><span class="tech-chip">CSS3</span>
+            <span class="tech-chip">JavaScript</span><span class="tech-chip">Responsive</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/Safiya007/little-lemon-restaurant" target="_blank" rel="noopener noreferrer" class="proj-btn github">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 0z"/></svg>
+              GitHub
+            </a>
+            <a href="https://safiya007.github.io/little-lemon-restaurant" target="_blank" rel="noopener noreferrer" class="proj-btn demo">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal delay-2">
+        <div class="proj-img">
+          <div class="proj-img-bg" style="background:linear-gradient(135deg,#0a1a2e,#0d2b1e)">🥽</div>
+          <div class="proj-img-overlay"></div>
+          <div class="proj-live-badge featured">Featured ✦</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">VR + AI Physiotherapy Simulator</div>
+          <div class="proj-desc">An immersive virtual reality physiotherapy platform powered by AI motion analysis. Guides patients through rehabilitation exercises with real-time pose correction and progress tracking.</div>
+          <div class="proj-tech">
+            <span class="tech-chip">VR/XR</span><span class="tech-chip">AI/ML</span>
+            <span class="tech-chip">AI assisted</span><span class="tech-chip">Computer Vision</span>
+            <span class="tech-chip">React</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/Safiya007/Physio-AI" target="_blank" rel="noopener noreferrer" class="proj-btn github">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 0z"/></svg>
+              GitHub
+            </a>
+            <a href="https://physio-ai-bice.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-btn demo">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card reveal delay-3">
+        <div class="proj-img">
+          <div class="proj-img-bg" style="background:linear-gradient(135deg,#0e1a12,#1a1204)">📊</div>
+          <div class="proj-img-overlay"></div>
+          <div class="proj-live-badge open">Open Source ✦</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">Data Transformation to Excel</div>
+          <div class="proj-desc">A powerful data processing tool that transforms raw datasets into structured, formatted Excel reports. Features automated charts, pivot tables, and intelligent data cleaning pipelines.</div>
+          <div class="proj-tech">
+            <span class="tech-chip">Python</span><span class="tech-chip">Pandas</span>
+            <span class="tech-chip">OpenPyXL</span><span class="tech-chip">Data Viz</span>
+          </div>
+          <div class="proj-actions">
+            <a href="#" class="proj-btn github" style="opacity:.5;pointer-events:none">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 0z"/></svg>
+              GitHub
+            </a>
+            <a href="#" class="proj-btn demo" style="opacity:.5;pointer-events:none">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card reveal delay-4">
+        <div class="proj-img">
+          <div class="proj-img-bg" style="background:linear-gradient(135deg,#0d2b1e,#1a1204)">💪</div>
+          <div class="proj-img-overlay"></div>
+          <div class="proj-live-badge ai">AI Powered ✦</div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-title">RISE – AI Recovery &amp; Fitness Assistant</div>
+          <div class="proj-desc">An AI-powered recovery and fitness assistant that generates personalized comeback plans, therapist-style reports, pain analysis, recovery tracking, and exercise recommendations based on user goals and physical condition.</div>
+          <div class="proj-tech">
+            <span class="tech-chip">AI</span><span class="tech-chip">PartyRock</span>
+            <span class="tech-chip">Prompt Engineering</span><span class="tech-chip">HealthTech</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://partyrock.aws/u/NexusKill/W1WY0PKFo/RISE" target="_blank" rel="noopener noreferrer" class="proj-btn demo" style="flex:unset;width:100%">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     EDUCATION
+══════════════════════════════════════════ -->
+<section id="education">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:1rem">
+      <div class="section-label reveal" style="justify-content:center">Academic Journey</div>
+      <h2 class="section-title reveal delay-1">Education <span class="grad-text">&amp; Background</span></h2>
+    </div>
+    <div class="exp-grid">
+
+      <div class="exp-card reveal delay-2">
+        <div class="exp-card-glow" style="background:rgba(94,207,190,.12)"></div>
+        <div class="exp-type" style="color:var(--accent3)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          Education
+        </div>
+        <div class="exp-icon" style="background:rgba(94,207,190,.1);border:1px solid rgba(94,207,190,.2)">🎓</div>
+        <div class="exp-title">B.Tech Information Technology</div>
+        <div class="exp-org">Dhanalakshmi Srinivasan Engineering College, Perambalur, Tamil Nadu</div>
+        <div class="exp-date">2023 – 2027 · CGPA: 8.5 / 10</div>
+        <div class="exp-desc">Pursuing Bachelor's degree in Information Technology with focus on Full Stack Development and AI/ML trends. Actively participating in hackathons, certifications, and innovative tech projects.</div>
+      </div>
+
+      <div class="exp-card reveal delay-3">
+        <div class="exp-card-glow" style="background:rgba(201,168,76,.12)"></div>
+        <div class="exp-type" style="color:var(--accent)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          Higher Secondary
+        </div>
+        <div class="exp-icon" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2)">🏫</div>
+        <div class="exp-title">Higher Secondary Education</div>
+        <div class="exp-org">Sri Ramakrishna Girls Matric Higher Secondary School, Perambalur, Tamil Nadu</div>
+        <div class="exp-date">2021 – 2023 · Percentage: 86%</div>
+        <div class="exp-desc">Completed higher secondary education with specialization in Biomedical Science and Mathematics. Built strong foundations in analytical thinking, scientific fundamentals, and communication skills.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     EXPERIENCE & CERTIFICATIONS
+══════════════════════════════════════════ -->
+<section id="experience">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:1rem">
+      <div class="section-label reveal" style="justify-content:center">Journey</div>
+      <h2 class="section-title reveal delay-1">Experience &amp; <span class="grad-text">Certifications</span></h2>
+    </div>
+    <div class="exp-grid">
+
+      <!-- NLC Internship -->
+      <div class="exp-card reveal delay-2">
+        <div class="exp-card-glow" style="background:rgba(201,168,76,.15)"></div>
+        <div class="exp-type" style="color:var(--accent)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          Internship
+        </div>
+        <div class="exp-icon" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2)">⚡</div>
+        <div class="exp-title">Software Development Intern</div>
+        <div class="exp-org">NLC India Limited — Central Government Enterprise</div>
+        <div class="exp-date">2025 · On-site</div>
+        <div class="exp-desc">Worked on software development and technical solutions in a professional industrial environment. Gained hands-on experience in web technologies, problem-solving, teamwork, and real-time project execution under experienced engineers at one of India's prestigious central government enterprises.</div>
+        <div class="cert-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Internship Certified · Safiya Begam
+        </div>
+        <a href="https://drive.google.com/file/d/10qW1CLesJG2XaQ3LogD3a3setyShyVt5/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Novitech Internship -->
+      <div class="exp-card reveal delay-2">
+        <div class="exp-card-glow" style="background:rgba(201,168,76,.15)"></div>
+        <div class="exp-type" style="color:var(--accent)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          Internship
+        </div>
+        <div class="exp-icon" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2)">💼</div>
+        <div class="exp-title">Full Stack Developer Intern</div>
+        <div class="exp-org">Novitech R&amp;D — Remote</div>
+        <div class="exp-date">May 2026 – Present</div>
+        <div class="ongoing-badge">● Ongoing</div>
+        <div class="exp-desc">Developing and deploying full-stack web applications using React, Java, MySQL, and REST APIs. Collaborating with developers on frontend optimization, backend integration, and scalable application development in a real-world development environment.</div>
+        <div class="cert-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Internship Verified · Safiya Begam
+        </div>
+      </div>
+
+      <!-- NCVET -->
+      <div class="exp-card reveal delay-3">
+        <div class="exp-card-glow" style="background:rgba(167,139,250,.12)"></div>
+        <div class="exp-type" style="color:#a855f7">Certification</div>
+        <div class="exp-icon" style="background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2)">📱</div>
+        <div class="exp-title">Application Developer — Web &amp; Mobile</div>
+        <div class="exp-org">NCVET — Central Government Certification</div>
+        <div class="exp-date">2026 · Certified</div>
+        <div class="exp-desc">Gained practical exposure to web and mobile application development concepts including frontend, backend, and responsive development.</div>
+        <div class="cert-badge">Government Certified · Safiya Begam</div>
+        <a href="https://drive.google.com/file/d/1hbnxMaqIm_HyjHN0VAh9SA8MWvuzwv4e/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- MERN Auth -->
+      <div class="exp-card reveal delay-2">
+        <div class="exp-card-glow" style="background:rgba(52,211,153,.12)"></div>
+        <div class="exp-type" style="color:var(--green)">Workshop Certificate</div>
+        <div class="exp-icon" style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2)">🔐</div>
+        <div class="exp-title">Authentication Flow in MERN Stack</div>
+        <div class="exp-org">Livewire</div>
+        <div class="exp-date">2026 · Workshop</div>
+        <div class="exp-desc">Learned secure authentication flow implementation using JWT, React, Node.js, Express, and MongoDB.</div>
+        <div class="cert-badge">Workshop Certified · Safiya Begam</div>
+        <a href="https://drive.google.com/file/d/1cgfLuPi-4XS6-JhxQvRTihcAvCehsmHl/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- AWS -->
+      <div class="exp-card reveal delay-3">
+        <div class="exp-card-glow" style="background:rgba(201,168,76,.12)"></div>
+        <div class="exp-type" style="color:var(--accent)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Certification
+        </div>
+        <div class="exp-icon" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2)">☁️</div>
+        <div class="exp-title">AWS AI Practitioner</div>
+        <div class="exp-org">Amazon Web Services</div>
+        <div class="exp-date">2024 · Verified</div>
+        <div class="exp-desc">Certified in AWS AI and machine learning services, foundational ML concepts, responsible AI principles, and cloud-based AI application development patterns.</div>
+        <div class="cert-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          AWS Certified Verified
+        </div>
+        <a href="https://www.udacity.com/certificate/e/3369bc2a-333d-11f1-8ad6-4fd7f588854d" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Prompt Engineering -->
+      <div class="exp-card reveal delay-3">
+        <div class="exp-card-glow" style="background:rgba(167,139,250,.1)"></div>
+        <div class="exp-type" style="color:#a855f7">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Certification
+        </div>
+        <div class="exp-icon" style="background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2)">🤖</div>
+        <div class="exp-title">Prompt Engineering</div>
+        <div class="exp-org">Vanderbilt University</div>
+        <div class="exp-date">Apr 10, 2026 · Verified</div>
+        <div class="exp-desc">Learned advanced prompt engineering techniques, structured prompting, LLM optimization, and real-world generative AI workflows.</div>
+        <div class="cert-badge">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Certified · Safiya Begam
+        </div>
+        <a href="https://drive.google.com/file/d/16bHnAN7MHocInreQkl1HuGMGtK7pLePZ/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Frontend Capstone -->
+      <div class="exp-card reveal delay-4">
+        <div class="exp-card-glow" style="background:rgba(94,207,190,.1)"></div>
+        <div class="exp-type" style="color:var(--accent3)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Certification
+        </div>
+        <div class="exp-icon" style="background:rgba(94,207,190,.1);border:1px solid rgba(94,207,190,.2)">💻</div>
+        <div class="exp-title">Front-End Developer Capstone</div>
+        <div class="exp-org">Professional Certification Program</div>
+        <div class="exp-date">2026 · Verified</div>
+        <div class="exp-desc">Built responsive web applications using HTML, CSS, JavaScript, React.js, and modern UI/UX development practices.</div>
+        <div class="cert-badge">Certified · Safiya Begam</div>
+        <a href="https://coursera.org/share/0a354ee74f7d973033e35115b780e17d" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Johns Hopkins -->
+      <div class="exp-card reveal delay-6">
+        <div class="exp-card-glow" style="background:rgba(224,123,114,.1)"></div>
+        <div class="exp-type" style="color:var(--pink)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Certification
+        </div>
+        <div class="exp-icon" style="background:rgba(224,123,114,.1);border:1px solid rgba(224,123,114,.2)">🌐</div>
+        <div class="exp-title">HTML, CSS, and JavaScript for Frontend Developers</div>
+        <div class="exp-org">Johns Hopkins University</div>
+        <div class="exp-date">2026 · Verified</div>
+        <div class="exp-desc">Learned responsive web development using HTML, CSS, and JavaScript, including UI design, DOM manipulation, layouts, and interactive frontend development concepts.</div>
+        <div class="cert-badge">Certified · Safiya Begam</div>
+        <a href="https://coursera.org/share/6716343445f96bbb60ec1d80e5a20ed3" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Tata GenAI -->
+      <div class="exp-card reveal delay-5">
+        <div class="exp-card-glow" style="background:rgba(52,211,153,.1)"></div>
+        <div class="exp-type" style="color:var(--green)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Job Simulation
+        </div>
+        <div class="exp-icon" style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2)">📊</div>
+        <div class="exp-title">GenAI Powered Data Analytics</div>
+        <div class="exp-org">Tata Group</div>
+        <div class="exp-date">2026 · Completed</div>
+        <div class="exp-desc">Worked on AI-driven analytics workflows, business insights generation, data visualization, and enterprise GenAI solutions.</div>
+        <div class="cert-badge">Certified · Safiya Begam</div>
+        <a href="https://drive.google.com/file/d/1ozGpyZmRn3I8hzGDCKZn680_wl0BpwGN/view?usp=drive_link" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- MongoDB -->
+      <div class="exp-card reveal delay-3">
+        <div class="exp-card-glow" style="background:rgba(52,211,153,.12)"></div>
+        <div class="exp-type" style="color:var(--green)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Certification
+        </div>
+        <div class="exp-icon" style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2)">🍃</div>
+        <div class="exp-title">MongoDB Basics for Students</div>
+        <div class="exp-org">MongoDB University</div>
+        <div class="exp-date">2026 · Certified</div>
+        <div class="exp-desc">Learned MongoDB fundamentals including NoSQL databases, collections, documents, CRUD operations, indexing, and database management concepts for modern web applications.</div>
+        <div class="cert-badge">Certified · Safiya Begam K</div>
+        <a href="https://www.credly.com/badges/9b340e98-e4a5-49ec-bf85-c5651de85461/print" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- AI for All -->
+      <div class="exp-card reveal delay-1">
+        <div class="exp-card-glow" style="background:rgba(94,207,190,.12)"></div>
+        <div class="exp-type" style="color:var(--accent3)">Certification</div>
+        <div class="exp-icon" style="background:rgba(94,207,190,.1);border:1px solid rgba(94,207,190,.2)">🤖</div>
+        <div class="exp-title">AI Course for All</div>
+        <div class="exp-org">Digital India · Intel</div>
+        <div class="exp-date">2026 · Certified</div>
+        <div class="exp-desc">Completed AI basic concepts by Intel training focused on Artificial Intelligence concepts, practical applications, and problem-solving techniques.</div>
+        <div class="cert-badge">Certified · Safiya Begam</div>
+        <a href="https://drive.google.com/file/d/1ci298QnaiB5gnN0I2Vzd9BDrzPGBbkKu/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Presentation Skills -->
+      <div class="exp-card reveal delay-1">
+        <div class="exp-card-glow" style="background:rgba(201,168,76,.12)"></div>
+        <div class="exp-type" style="color:var(--accent)">Soft Skills</div>
+        <div class="exp-icon" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2)">🎤</div>
+        <div class="exp-title">Presentation Skills</div>
+        <div class="exp-org">Wadhwani Foundation</div>
+        <div class="exp-date">2026 · Certified</div>
+        <div class="exp-desc">Developed effective communication, confidence-building, and public speaking skills.</div>
+        <div class="cert-badge">Soft Skills Certified · Safiya Begam</div>
+        <a href="https://drive.google.com/file/d/1emLCQWP3uEUpzX1sBos8Tvp5TO0-uT5-/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Innovation -->
+      <div class="exp-card reveal delay-2">
+        <div class="exp-card-glow" style="background:rgba(224,123,114,.12)"></div>
+        <div class="exp-type" style="color:var(--pink)">Certification</div>
+        <div class="exp-icon" style="background:rgba(224,123,114,.1);border:1px solid rgba(224,123,114,.2)">💡</div>
+        <div class="exp-title">Innovation &amp; Entrepreneurship</div>
+        <div class="exp-org">Wadhwani Foundation</div>
+        <div class="exp-date">2026 · Certified</div>
+        <div class="exp-desc">Learned innovation strategies, creativity, entrepreneurial thinking, and idea validation techniques.</div>
+        <div class="cert-badge">Innovation Certified · Safiya Begam</div>
+        <a href="https://drive.google.com/file/d/1wHlrJjZBzX1SqHFdqsEsfXIA9I4zZRL2/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Customer Centricity -->
+      <div class="exp-card reveal delay-3">
+        <div class="exp-card-glow" style="background:rgba(94,207,190,.12)"></div>
+        <div class="exp-type" style="color:var(--accent3)">Certification</div>
+        <div class="exp-icon" style="background:rgba(94,207,190,.1);border:1px solid rgba(94,207,190,.2)">🤝</div>
+        <div class="exp-title">Customer Centricity</div>
+        <div class="exp-org">Wadhwani Foundation</div>
+        <div class="exp-date">2026 · Certified</div>
+        <div class="exp-desc">Learned customer-focused thinking, service excellence, and customer engagement strategies.</div>
+        <div class="cert-badge">Customer Centricity Certified · Safiya Begam</div>
+        <a href="https://drive.google.com/file/d/1-2irLm-Yi9ellJ4d1RyXRUGQxNiA82VO/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Financial Management -->
+      <div class="exp-card reveal delay-1">
+        <div class="exp-card-glow" style="background:rgba(52,211,153,.12)"></div>
+        <div class="exp-type" style="color:var(--green)">Certification</div>
+        <div class="exp-icon" style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2)">💰</div>
+        <div class="exp-title">Financial Management &amp; Literacy</div>
+        <div class="exp-org">Wadhwani Foundation</div>
+        <div class="exp-date">2026 · Certified</div>
+        <div class="exp-desc">Learned financial planning, budgeting, money management, and financial literacy concepts.</div>
+        <div class="cert-badge">Financial Literacy Certified · Safiya Begam</div>
+        <a href="https://drive.google.com/file/d/1eeYU9JpIEZZiB73IcWIQ0Zg6LTFBztwP/view?usp=sharing" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
+      <!-- Achievements -->
+      <div class="exp-card reveal delay-5">
+        <div class="exp-card-glow" style="background:rgba(201,168,76,.1)"></div>
+        <div class="exp-type" style="color:var(--accent)">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          Achievements
+        </div>
+        <div class="exp-icon" style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.2)">🏆</div>
+        <div class="exp-title">Hackathon &amp; Open Source</div>
+        <div class="exp-org">Various Competitions</div>
+        <div class="exp-date">2022 – Present</div>
+        <div class="exp-desc">Top finalist in multiple national-level hackathons. Active open source contributor with projects reaching 100+ GitHub stars. Speaker at local developer meetups.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-glow-banner reveal">
+        <div class="section-label" style="justify-content:center;margin-bottom:.8rem">Let's Connect</div>
+        <div class="contact-banner-title">
+          Ready to build something<br><span class="grad-text">extraordinary?</span>
+        </div>
+        <p class="contact-banner-p">
+          Whether you have a project in mind, need a collaborator, or just want to say hello — my inbox is always open. Let's create something remarkable together.
+        </p>
+        <a href="mailto:safiyabegam2006@gmail.com" class="btn-primary" style="display:inline-flex;margin:0 auto">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+          Say Hello →
+        </a>
+      </div>
+
+      <form class="contact-form reveal delay-2" onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input class="form-input" type="text" placeholder="Your name" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" placeholder="your@email.com" required/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <input class="form-input" type="text" placeholder="What's this about?"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell me about your project, idea, or just say hi..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Message
+        </button>
+      </form>
+
+      <div class="social-links reveal delay-3">
+        <a href="https://github.com/Safiya007" target="_blank" rel="noopener noreferrer" class="social-link">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 0z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/safiya-begam/" target="_blank" rel="noopener noreferrer" class="social-link">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:safiyabegam2006@gmail.com" class="social-link">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">SB/</div>
+      <div class="footer-copy">© 2026 Safiya Begam · Built at 2am, with coffee &amp; conviction.</div>
+      <a href="#hero" class="footer-back">
+        Back to top
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast">
+  <span class="toast-icon">✦</span>
+  <span id="toast-msg">Message sent! I'll get back to you soon.</span>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SCRIPTS (exact same logic as Document 4)
+══════════════════════════════════════════ -->
+<script src="script.js"></script>
+</body>
+</html>
