@@ -1,4 +1,4 @@
-# 🚀 Safiya Begam — Elite Developer Portfolio
+# 🚀 Safiya Begam —  Developer Portfolio
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Safiya007/Elite_portfolio)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Safiya007/Elite_portfolio)
@@ -21,7 +21,7 @@ It is designed with a **high-end UI/UX approach inspired by Awwwards-level desig
 
 ## 🔥 Live Demo
 
-👉 https://your-live-link-here.com
+https://safiya-portfo.vercel.app/
 
 ---
 
